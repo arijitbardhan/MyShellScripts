@@ -1,5 +1,4 @@
 #!bin/bash
-sudo su
 cd
 wget https://raw.githubusercontent.com/arijitbardhan/myscripts/master/install-mysql.sh?_sm_au_=itHP6JqWbQ1F7f6Q
 #installing mysql
