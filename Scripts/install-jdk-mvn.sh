@@ -1,6 +1,3 @@
-#update the yum system
-yum update
-
 #install oracle jdk8
 cd ~
 wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jdk-8u172-linux-x64.rpm"
@@ -16,8 +13,7 @@ mv apache-maven-3.5.3/ maven/
 
 #set Maven path
 sudo touch /etc/profile.d/maven.sh
-echo "export M2_HOME=/home/$USER/maven" >> /etc/profile.d/maven.sh
-echo "export PATH=${M2_HOME}/bin:${PATH}" >> /etc/profile.d/maven.sh
+echo "export PATH=/home/$USER/maven/bin:${PATH}" | sudo tee /etc/profile.d/maven.sh
 sudo chmod 755 /etc/profile.d/maven.sh
 source /etc/profile.d/maven.sh
 
